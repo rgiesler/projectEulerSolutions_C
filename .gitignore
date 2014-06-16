@@ -1,0 +1,25 @@
+# Compiled object files
+*.o
+*.obj
+
+# Library files
+*.lib
+*.so
+*.dll
+
+# Compiled files
+*.exe
+*.out
+
+# Windows specific
+thumbs.db
+desktop.ini
+
+# Mac specific
+.DS_Store
+
+# Editor temporary files
+*~
+
+# Build directory
+build/
