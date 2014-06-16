@@ -11,4 +11,4 @@ all: $(PROGS)
 	 $(CC) $(CFLAGS) -o $(BUILDDIR)/$@ $< $(LDFLAGS)
 
 clean:
-	rm -f $(BUILDDIR)/$(PROGS)
+	rm -f $(BUILDDIR)/*
