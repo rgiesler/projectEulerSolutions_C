@@ -12,9 +12,10 @@ int isIntMultiple (const int min1, const int max1, const int min2,
 
 int main(int argc, char *argv[])
 {
-	// Highest possible number is 999*999 = 998001, so only need to check up to
-	// then. We will create palindromes then check, as it is easier than doing
-	// it the other way around (computationally easier)
+	/*	Highest possible number is 999*999 = 998001, so only need to check up to
+		then. We will create palindromes then check, as it is easier than doing
+		it the other way around (computationally easier)
+	*/
 	int i = 0, palin = 0, max = 0;
 	while(palin <= 998001) {
 		palin = i*1000 + reverse_int(i, 3);
@@ -26,6 +27,8 @@ int main(int argc, char *argv[])
 	return 0;
 }
 
+/*	Reverses the order of the digits in the int, with padding to make k digits
+*/
 int reverse_int (int num, const int k)
 {
 	int reverse = 0, i;
@@ -36,6 +39,8 @@ int reverse_int (int num, const int k)
 	return reverse;
 }
 
+/*	Checks to see if num is an integer of i1 and i2, where i1 is in [min1,max1)
+	and i2 is in [min2,max2)	*/
 int isIntMultiple (const int min1, const int max1, const int min2, 
 	const int max2, int num)
 {

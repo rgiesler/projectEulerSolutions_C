@@ -9,25 +9,29 @@
 	exceed four million, find the sum of the even-valued terms.
 */
 
+/*	See theory below	*/
 int main(int argc, char *argv[])
 {
-	long int first = 1, second = 2, sum = 0, tmp = 0;
+	long f3=2, f6=0, sum = 0, f=2;
 
-	while (second < 4000000) {
-		// Every third number will be even, so we only need to find every third
-		// number and add them all together
-
-		sum += second;
-
-		// now generate third number, example is for first iteration
-		first = first + second;		//first = 3, second = 2
-		second = first + second;	//first = 3, second = 5
-		tmp = second;				//tmp = 5
-		second = first + second;	//first = 3, second = 8
-		first = tmp;				//first = 5, second = 8
-
+	while (f < 4000000) {
+		sum += f;
+		//	Update numbers
+		f = 4*f3 + f6;
+		f6 = f3;
+		f3 = f;
 	}
 
 	printf("Sum: %ld\n", sum);
 	return 0;
 }
+
+/*	We want to find only every third Fibonacci number, so we want to express
+	Fn in terms of Fn-3 and Fn-6:
+
+	Fn	= Fn-1 					+ Fn-2
+		= Fn-2 			+ Fn-3 	+ Fn-3	+ Fn-4
+		= Fn-3 + Fn-4 	+ Fn-3	+ Fn-3	+ Fn-5 + Fn-6 	(now group terms)
+		= 3*Fn-3 + (Fn-4 + Fn-5) + Fn-6					(Fn-4 + Fn-5 = Fn-3)
+	Fn	= 4*Fn-3 + Fn-6
+*/
