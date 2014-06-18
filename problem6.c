@@ -48,9 +48,9 @@ int main (int argc, char *argv[])
 	an^3 + bn^2 + cn + d
 
 	Now we need to find the constants:
-	n 		0		1 			2			3
-	sum 	0		1 			5 			14
-			d=0		a+b+c=1		8a+4b+3c=5 	27a+9b+3c=14
+	n		0		1			2			3
+	sum		0		1			5			14
+			d=0		a+b+c=1		8a+4b+3c=5	27a+9b+3c=14
 	4 unknowns, 4 equations, we can solve:
 	a = 1/3
 	b = 1/2

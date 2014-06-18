@@ -36,6 +36,5 @@ int isPrime(int num, int primes[], int primeCount)
 	memory. We do this because we only need to check for division for previous
 	primes, not all numbers. 
 
-	We will also only check odd numbers, as all primes
-	after 2 are odd.
+	We will also only check odd numbers, as all primes after 2 are odd.
 */
